@@ -1,0 +1,485 @@
+/* <!-- Thodsawas Ubol CodeCamp#19 --> */
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    /* Enables smooth scrolling for the whole page */
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #ffffff;
+    padding-top: 70px
+}
+
+/* NAVIGATION */
+header {
+    background: #f4f4f4;
+    color: #000000;
+    padding: 20px 10%;
+    width: 100%;
+    /* Ensure the header stretches across the full width */
+    position: fixed;
+    /* Fix the position of the header */
+    top: 0;
+    /* Align the header at the top of the viewport */
+    left: 0;
+    /* Align the header to the left side of the viewport */
+    z-index: 1000;
+    /* Ensure the header is above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #00000080;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    padding: 0 15px;
+    /* Adjust padding to make elements closer */
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #99ff99;
+}
+
+.login a {
+    color: #387c84;
+    /* Green color for the login text */
+}
+
+.login a:hover {
+    color: #99ff99;
+    /* Lighter green on hover */
+}
+
+/* SECTION */
+section {
+    min-height: 90vh;
+    padding: 80px 20px;
+}
+
+/* HOME */
+.home {
+    height: 100vh; /* Full screen height */
+    background-image: url('https://fastly.picsum.photos/id/46/3264/2448.jpg?hmac=ZHE8nk-Q9uRp4MxgKNvN7V7pYFvA-9BCv99ltY3HBv4'); /* Replace with your actual image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-attachment: fixed; /* This is the key for parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+}
+
+.home h1 {
+    font-size: 150px;
+    /* Increase font size for home h1 */
+    letter-spacing: 10px;
+}
+
+.home p:first-child {
+    font-weight: bold;
+}
+
+.home p {
+    letter-spacing: 2px;
+}
+
+.home .cta-btn {
+    background-color: black; /* Black backgroung */
+    color: white; /* White text */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 40px;
+    border: 2px solid black; /* Black border */
+    border-radius: 5px;
+    display: inline-block; /* Ensure it behaves like a button */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transition effect */
+}
+
+.home .cta-btn:hover {
+    background-color: white; /* Transparent background on hover */
+    color: #000000; /* Keep the text white */
+}
+
+/* ABOUT ME */
+.about {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.about-image {
+    flex: 0 0 50%; /* Adjust width to fit within the section */
+    overflow: hidden;
+    margin-right: -50px; /* Adjust this value to bring the image closer to the text */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 500px; /* Keep your original margin-left */
+}
+
+.about-text h2 {
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-size: 50px;
+}
+
+.about-text p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1px; /* Keep your original line-height */
+    white-space: nowrap;
+}
+
+.btn-r {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    margin-right: 10px; /* Adjust spacing between buttons */
+}
+
+.btn-r:hover {
+    background-color: #ffffff00;
+    color: #000000;
+}
+
+.btn-f {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+.btn-f:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Services */
+.services {
+    height: 100vh; /* Full screen height */
+    padding: 50px 0;
+    background-image: url('https://fastly.picsum.photos/id/185/3995/2662.jpg?hmac=gXqQYKLwRcZNsxrWGW6YosAXEIU6-D7UbytF_ApGmDs'); /* Add the background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This is the key for parallax */
+    background-repeat: no-repeat;
+}
+
+.services-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    max-width: 250px; /* Match the width of the first card */
+    margin-left: 520px; /* 50% minus half the container width of 750px */
+}
+
+.services-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.services-card-containers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.services-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px solid #000;
+    padding: 20px;
+    width: 250px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services-card:hover {
+    transform: translateY(-10px); /* Hover effect to lift the card */
+}
+
+.services-card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.services-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.services-card hr {
+    width: 200px; /* Increase width of horizontal line */
+    border: 1px solid #000;
+    margin: 20px auto;
+}
+
+.services-duration, .services-price {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.services-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.services-btn:hover {
+    background-color: #444;
+}
+
+.more-services-container {
+    text-align: center;
+}
+
+.more-services {
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid black;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-right: 10px; /* Adjust spacing between buttons */
+    cursor: pointer;
+}
+
+.more-services:hover {
+    background-color: white;
+    color: #000000;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    justify-content: center; /* Centers the two-column content horizontally */
+    align-items: center; /* Aligns the items vertically at the center */
+    padding: 50px;
+    background-color: #c9956b;
+    color: #000;
+}
+
+.contact-info {
+    max-width: 300px;
+    line-height: 1.8;
+    margin-right: 50px;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin: 20px 0;
+    letter-spacing: 10px;
+}
+
+.social-icons a {
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #444;
+}
+
+.contact-info .copyright {
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+.contact-info .copyright a {
+    text-decoration: none;
+    color: #000;
+    text-decoration: underline;
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 2px solid #000;
+    background-color: #eaf5f600;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    height: 40px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 60px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    color: #000000;
+}
+
+/* FIXED-CHAT */
+.fixed-chat {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.fixed-chat:hover {
+    background-color: #555;
+}
