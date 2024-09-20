@@ -33,18 +33,18 @@ header nav ul li a {
 
 /* Intro */
 .intro-container {
-    display: flex; /* Set up flexbox layout */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space items out horizontally */
-    padding: 40px 20px; /* Padding for top and bottom and to match wrapper padding */
-    background-color: #fff; /* Background color */
-    margin: 0 auto; /* Center the container */
-    max-width: 1200px; /* Ensure it matches the max-width of the wrapper */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 40px 20px; 
+    background-color: #fff; 
+    margin: 0 auto; 
+    max-width: 1200px; 
 }
 
 .intro-text {
     flex: 3;
-    padding-right: 20px; /* Add some space between text and image */
+    padding-right: 20px; 
 }
 
 .intro-text h1 {
@@ -75,26 +75,26 @@ button:hover {
 .intro-image {
     flex: 2;
     display: flex;
-    justify-content: flex-end; /* Centers the image inside its flex box */
+    justify-content: flex-end; 
 }
 
 .intro-image img {
-    width: 200px; /* Fixed width */
-    height: 200px; /* Fixed height to maintain a square, for circular shape */
-    border-radius: 50%; /* Circular shape */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover; 
 }
 
 /* Posts */
 .posts-wrapper {
-    background-color: #f4faff; /* Light blue background */
-    padding: 20px 0; /* Padding for top and bottom */
+    background-color: #f4faff; 
+    padding: 20px 0; 
 }
 
 .posts-container {
-    max-width: 1200px; /* Ensure it matches the max-width */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Padding to align with wrapper padding */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
 
 .posts-header {
@@ -117,15 +117,15 @@ button:hover {
 
 .posts-contents {
     display: flex;
-    gap: 20px; /* Gap between post boxes */
+    gap: 20px; 
 }
 
 .Content-L, .Content-R {
     background-color: #fff;
     padding: 20px;
-    width: calc(50% - 10px); /* Takes up 50% of the width with space in between */
+    width: calc(50% - 10px); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* Pointer cursor effect */
+    cursor: pointer; 
 }
 
 .Content-L:hover, .Content-R:hover {
@@ -161,12 +161,12 @@ button:hover {
 .works-container {
     display: flex; 
     flex-direction: column;
-    align-items: flex-start; /* Center items vertically */
-    justify-content: space-between; /* Space items out horizontally */
-    padding: 40px 20px; /* Padding for top and bottom and to match wrapper padding */
-    background-color: #fff; /* Background color */
-    margin: 0 auto; /* Center the container */
-    max-width: 1200px; /* Ensure it matches the max-width of the wrapper */
+    align-items: flex-start; 
+    justify-content: space-between; 
+    padding: 40px 20px; 
+    background-color: #fff; 
+    margin: 0 auto; 
+    max-width: 1200px; 
 }
 
 .works-contents {
@@ -177,7 +177,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px 0 20px 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* Pointer cursor effect */
+    cursor: pointer; 
 }
 
 .works-contents:hover {
