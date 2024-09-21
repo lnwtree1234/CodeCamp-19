@@ -1,0 +1,314 @@
+/* <!-- Thodsawas Ubol CodeCamp#19 --> */
+
+@import url('https://fonts.cdnfonts.com/css/uber-move-text');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Uber Move Text', sans-serif;
+}
+
+html,
+body {
+    color: white;
+    background-color: #000000;
+}
+
+section {
+    background-color: #000000;
+    padding-top: 100px;
+}
+
+header {
+    background-color: #000000;
+}
+
+.nav-header {
+    height: 63px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.nav-l {
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.nav-l img {
+    width: 7%;
+    margin-right: 15px;
+}
+
+.nav-l li:last-child {
+    margin-left: -20px;
+    transform: translateY(-2px); 
+}
+
+.nav-r {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    color: #ffffff;
+    align-items: center;
+}
+
+.nav-r li:last-child {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+}
+
+.go-wrapper {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.go-block {
+    width: 40%;
+}
+
+.go-container h1 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0;
+    color: #ffffff;
+}
+
+.go-container p {
+    margin: 30px 0 30px;
+    color: #ffffff;
+}
+
+/* Pickup */
+.pickup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 87%; 
+    margin-top: 10px;
+    border: 1px solid #F3F3F3;
+    background-color: #F3F3F3;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.pickup .fa:first-child {
+    position: absolute;
+    left: 15px; 
+    color: #000000; 
+    z-index: 10;
+    font-size: 10px;
+}
+
+.input-field {
+    padding-left: 30px;
+    border: none; 
+    width: 87%; 
+    outline: none; 
+    background-color: #F3F3F3;
+    font-size: 16px;
+}
+
+.pickup .fa:last-child {
+    position: absolute;
+    right: 10px; 
+    font-size: 24px; 
+    color: #000000; 
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Dropoff */
+.dropoff {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 87%; 
+    margin-top: 15px;
+    border: 1px solid #F3F3F3;
+    background-color: #F3F3F3;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.dropoff .fa:first-child {
+    position: absolute;
+    left: 15px; 
+    color: #000000; 
+    z-index: 10;
+    font-size: 10px;
+}
+
+.dropoff .fa:last-child {
+    position: absolute;
+    right: 10px; 
+    font-size: 24px; 
+    color: #000000; 
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Date and Time */
+.date-time-picker {
+    margin-top: 15px;
+    width: 87%; 
+    background-color: #000000;
+    border-radius: 8px;
+    display: flex;
+    gap: 5px;
+
+}
+
+.date-picker,
+.time-picker {
+    flex: 1; 
+    display: flex;
+    align-items: center; 
+    position: relative; 
+}
+
+input[type="date"],
+select {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #F3F3F3;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #5E5E5E;
+    height: 100%;
+    box-sizing: border-box; 
+}
+
+.date-picker i {
+    position: absolute;
+    left: 10px;
+    color: #333;
+}
+
+.date-picker input[type="date"] {
+    padding-left: 40px; 
+}
+
+.see-prices {
+    margin-top: 15px;
+}
+
+.see-prices .btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.see-prices .btn:hover {
+    background-color: #333;
+}
+
+/* Image */
+.image {
+    width: 50%;
+    margin: 0;
+}
+
+.image img {
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .go-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .go-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .go-block {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .go-container h1 {
+        font-size: 42px;
+    }
+
+    .go-container p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .nav-l img {
+        width: 10%;
+    }
+
+    .nav-l,
+    .nav-r {
+        width: 100%;
+    }
+
+    .go-container h1 {
+        font-size: 32px;
+    }
+
+    .go-container p {
+        font-size: 16px;
+    }
+
+    .pickup,
+    .dropoff {
+        width: 100%;
+    }
+
+    .date-time-picker {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-l img {
+        width: 15%;
+    }
+
+    .go-container h1 {
+        font-size: 24px;
+    }
+
+    .go-container p {
+        font-size: 14px;
+    }
+
+    .see-prices .btn {
+        width: 100%;
+    }
+}
