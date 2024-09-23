@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js28</title>
+</head>
+
+<body>
+    <script>
+        // รับค่าจากผู้ใช้และเก็บไว้ในตัวแปร user
+        let user = prompt("กรุณากรอกชื่อผู้ใช้:");
+
+        // ตรวจสอบว่าผู้ใช้กรอกค่าว่างหรือกด Esc หรือไม่
+        if (user === "" || user === null) {
+            user = "guest";
+        } else if (user === "codecamp") {
+            // ถ้าผู้ใช้กรอกชื่อผู้ใช้เป็น "codecamp" ให้ถาม password
+            let password = prompt("กรุณากรอก password:");
+
+            // ตรวจสอบ password ว่าถูกต้องหรือไม่
+            if (password === "123456") {
+                user = "codecamp";
+            } else {
+                alert("Wrong password");
+                user = "guest"; // ตั้งค่า user เป็น guest ถ้ากรอกรหัสผิด
+            }
+        } else {
+            // ถ้าผู้ใช้กรอกชื่ออื่นที่ไม่ใช่ "codecamp" ให้ตั้งค่า user เป็น "guest"
+            user = "guest";
+        }
+
+        // แสดงข้อความต้อนรับพร้อมกับชื่อในตัวแปร user
+        alert("Welcome " + user);
+
+    </script>
+</body>
+
+</html>

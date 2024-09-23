@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js27</title>
+</head>
+
+<body>
+    <script>
+        // รับค่า username และ password จากผู้ใช้งาน
+        let username = prompt("กรุณาป้อน username:");
+        let password = prompt("กรุณาป้อน password:");
+
+        // ตรวจสอบว่ามีการกรอก username หรือไม่
+        if (username === "") {
+            alert("username is required");
+        }
+        // ตรวจสอบว่ามีการกรอก password หรือไม่
+        else if (password === "") {
+            alert("password is required");
+        }
+        // ตรวจสอบว่าข้อมูลตรงตามเงื่อนไขหรือไม่
+        else if ((username === "admin" && password === "1234") || (username === "john" && password === "qwerty")) {
+            alert("Hello " + username);
+        }
+        // ถ้าเงื่อนไขทั้งหมดไม่ผ่าน ให้แสดงข้อความว่าข้อมูลไม่ถูกต้อง
+        else {
+            alert("invalid username or password");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js26</title>
+</head>
+
+<body>
+    <script>
+        //** วิธีทำแบบ If-else **//
+
+        // รับค่าตัวเลข
+        let num1 = parseFloat(prompt("ป้อนตัวเลขที่ 1:"));
+        let num2 = parseFloat(prompt("ป้อนตัวเลขที่ 2:"));
+        let num3 = parseFloat(prompt("ป้อนตัวเลขที่ 3:"));
+
+        let largest, middle, smallest;
+
+        // เปรียบเทียบตัวเลขและจัดลำดับ
+        if (num1 >= num2 && num1 >= num3) {
+            largest = num1;
+            if (num2 >= num3) {
+                middle = num2;
+                smallest = num3;
+            } else {
+                middle = num3;
+                smallest = num2;
+            }
+        } else if (num2 >= num1 && num2 >= num3) {
+            largest = num2;
+            if (num1 >= num3) {
+                middle = num1;
+                smallest = num3;
+            } else {
+                middle = num3;
+                smallest = num1;
+            }
+        } else {
+            largest = num3;
+            if (num1 >= num2) {
+                middle = num1;
+                smallest = num2;
+            } else {
+                middle = num2;
+                smallest = num1;
+            }
+        }
+
+        // แสดงผลลัพธ์
+        alert("ตัวเลขเรียงจากมากไปน้อย: " + largest + ", " + middle + ", " + smallest);
+
+        //** วิธีทำแบบ Function **//
+
+        // // รับค่าตัวเลข 3 ตัว
+        // const num1 = parseFloat(prompt("Enter the first number"));
+        // const num2 = parseFloat(prompt("Enter the second number"));
+        // const num3 = parseFloat(prompt("Enter the third number"));
+
+        // // ตรวจสอบว่า input เป็นตัวเลขหรือไม่
+        // if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        //     alert("Invalid input. Please enter valid numbers.");
+        // } else {
+        //     // เก็บตัวเลขในอาร์เรย์
+        //     let numbers = [num1, num2, num3];
+
+        //     // จัดเรียงตัวเลขจากมากไปน้อย
+        //     numbers.sort(function (a, b) {
+        //         return b - a;
+        //     });
+
+        //     // แสดงผลลัพธ์ตัวเลขที่จัดเรียงแล้ว
+        //     alert("Sorted numbers: " + numbers.join(", "));
+        // }
+
+    </script>
+</body>
+
+</html>

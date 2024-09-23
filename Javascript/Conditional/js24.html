@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js24</title>
+</head>
+
+<body>
+    <script>
+        // รับ input ตัวเลข 2 ค่า
+        const number1 = prompt("Please enter the first number");
+        const number2 = prompt("Please enter the second number");
+
+        // แปลงค่า input เป็นตัวเลข
+        const num1 = parseFloat(number1);
+        const num2 = parseFloat(number2);
+
+        // ตรวจสอบว่า input ทั้งสองเป็นตัวเลขหรือไม่
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Invalid number");
+        } else {
+            // คำนวณผลบวกของตัวเลขทั้งสอง
+            const sum = num1 + num2;
+            alert("The sum is: " + sum);
+        }
+
+    </script>
+</body>
+
+</html>

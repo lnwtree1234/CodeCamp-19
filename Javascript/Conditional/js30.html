@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js30</title>
+</head>
+
+<body>
+    <script>
+        // รับค่า input จากผู้ใช้งาน
+        let input = prompt("กรุณากรอกตัวเลข (1, 0, หรือ -1):");
+
+        // แปลงค่าจาก string ที่รับเข้ามาเป็นตัวเลข
+        input = Number(input);
+
+        // ใช้ switch statement ในการตรวจสอบค่า input
+        switch (input) {
+            case 1:
+                alert("One");
+                break;
+            case 0:
+                alert("Zero");
+                break;
+            case -1:
+                alert("Minus");
+                break;
+            default:
+                alert("Invalid number");
+        }
+
+    </script>
+</body>
+
+</html>

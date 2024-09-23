@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js29</title>
+</head>
+
+<body>
+    <script>
+        // รับค่า zone จากผู้ใช้
+        let zone = prompt("กรุณาระบุ Zone ที่ต้องการจอง:");
+
+        // ตรวจสอบและแสดงราคาบัตรตาม zone ที่เลือก
+        if (zone.length === 1 && zone >= "B" && zone <= "T") {
+            // ตรวจสอบว่า zone มีความยาว 1 ตัวอักษรและอยู่ในช่วง B ถึง T
+            alert("4,000 บาท");
+        } else if (zone === "BB") {
+            alert("5,000 บาท");
+        } else if (zone[0] === "S" && (zone[1] >= "B" && zone[1] <= "N")) {
+            // ตรวจสอบว่า zone เริ่มด้วย "S" และตามด้วยตัวอักษรระหว่าง "B" ถึง "N"
+            alert("5,500 บาท");
+        } else if (zone === "AA") {
+            alert("6,500 บาท");
+        } else {
+            // ถ้า zone ที่กรอกไม่ตรงตามเงื่อนไขใดๆ
+            alert("ชื่อ Zone ไม่ถูกต้อง");
+        }
+
+    </script>
+</body>
+
+</html>

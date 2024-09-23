@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js25</title>
+</head>
+
+<body>
+    <script>
+        // รับค่า input จากผู้ใช้
+        const score = prompt("Please enter your score");
+
+        // แปลงค่า input เป็นตัวเลข
+        const numericScore = parseFloat(score);
+
+        // ตรวจสอบว่าค่าที่รับมาเป็นตัวเลขหรือไม่
+        if (isNaN(numericScore)) {
+            alert("Invalid input. Please enter a valid number.");
+        } else if (numericScore >= 80) {
+            alert("Your grade is: A");
+        } else if (numericScore >= 70) {
+            alert("Your grade is: B");
+        } else if (numericScore >= 60) {
+            alert("Your grade is: C");
+        } else if (numericScore >= 50) {
+            alert("Your grade is: D");
+        } else {
+            alert("Your grade is: F");
+        }
+
+    </script>
+</body>
+
+</html>

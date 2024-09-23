@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js23</title>
+</head>
+
+<body>
+    <script>
+        const number = prompt("Please enter a number");
+
+        // แปลง input เป็นตัวเลข
+        const numValue = parseFloat(number);
+
+        // ตรวจสอบว่าค่าที่รับมาเป็นตัวเลขหรือไม่
+        if (isNaN(numValue)) {
+            alert("Invalid number");
+        } else if (numValue % 2 === 0) {
+            alert("Even number");
+        } else {
+            alert("Odd number");
+        }
+
+    </script>
+</body>
+
+</html>
