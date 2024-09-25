@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js66 Calculator1</title>
+</head>
+
+<body>
+    <script>
+        let calculator = {
+            // properties สำหรับเก็บค่าทั้งสอง
+            a: 0,
+            b: 0,
+
+            // เมธอดสำหรับรับค่า input 2 ค่า
+            read: function () {
+                this.a = +prompt("Enter the first number:"); // รับค่าหมายเลขแรก
+                this.b = +prompt("Enter the second number:"); // รับค่าหมายเลขที่สอง
+            },
+
+            // เมธอดสำหรับคำนวณผลบวก
+            sum: function () {
+                return this.a + this.b; // คืนค่าผลบวก
+            },
+
+            // เมธอดสำหรับคำนวณผลคูณ
+            mul: function () {
+                return this.a * this.b; // คืนค่าผลคูณ
+            }
+        };
+
+        // เรียกใช้งานเมธอด
+        calculator.read();
+        alert(calculator.sum()); // แสดงผลบวก
+        alert(calculator.mul()); // แสดงผลคูณ
+
+    </script>
+</body>
+
+</html>

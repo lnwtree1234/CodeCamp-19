@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 68Accumulator</title>
+    <script>
+        // Constructor Function: Accumulator
+        function Accumulator(startingValue) {
+            this.currentValue = startingValue; // กำหนดค่าเริ่มต้นให้กับ currentValue
+
+            // Method สำหรับรับค่าจากผู้ใช้และบวกเข้ากับ currentValue
+            this.read = function() {
+                let valueToAdd = Number(prompt("Enter a number to add:")); // รับค่าจากผู้ใช้
+                this.currentValue += valueToAdd; // บวกค่าที่รับเข้ากับ currentValue
+            };
+
+            // Method สำหรับแสดงค่า currentValue
+            this.show = function() {
+                alert(`Current Value: ${this.currentValue}`); // แสดงค่า currentValue
+                console.log(`Current Value: ${this.currentValue}`); // แสดงค่า currentValue
+            };
+        }
+
+        // เมื่อโหลดหน้าให้ทำการสร้าง instance ของ Accumulator
+        window.onload = function() {
+            let startingValue = Number(prompt("Enter the starting value:")); // รับค่าตั้งต้นจากผู้ใช้
+            let accumulator = new Accumulator(startingValue); // สร้าง object ใหม่
+
+            accumulator.read(); // เรียกใช้ read() เพื่อเพิ่มค่า
+            accumulator.show(); // แสดง currentValue
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>

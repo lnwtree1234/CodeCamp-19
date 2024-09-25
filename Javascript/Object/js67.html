@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js67 Calculator2</title>
+</head>
+
+<body>
+    <script>
+        function Calculator() {
+            // properties สำหรับเก็บค่าทั้งสอง
+            this.a = 0;
+            this.b = 0;
+
+            // เมธอดสำหรับรับค่า input 2 ค่า
+            this.read = function () {
+                this.a = +prompt("Enter the first number:"); // รับค่าหมายเลขแรก
+                this.b = +prompt("Enter the second number:"); // รับค่าหมายเลขที่สอง
+            };
+
+            // เมธอดสำหรับคำนวณผลบวก
+            this.sum = function () {
+                return this.a + this.b; // คืนค่าผลบวก
+            };
+
+            // เมธอดสำหรับคำนวณผลคูณ
+            this.mul = function () {
+                return this.a * this.b; // คืนค่าผลคูณ
+            };
+        }
+
+        // สร้างอ็อบเจ็กต์ calculator
+        let calculator = new Calculator();
+
+        // เรียกใช้งานเมธอด
+        calculator.read();
+        alert(calculator.sum()); // แสดงผลบวก
+        alert(calculator.mul()); // แสดงผลคูณ
+
+    </script>
+</body>
+
+</html>
