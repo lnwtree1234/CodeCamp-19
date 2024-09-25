@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js70 Class Sale</title>
+</head>
+
+<body>
+    <script>
+        // Class: Sale
+        class Sale {
+            constructor(name) {
+                this.name = name;
+            }
+
+            calcPrice(price, discount) {
+                return price * (1 - discount); // คำนวณราคาหลังหักส่วนลด
+            }
+        }
+
+        // Class: Beverage สืบทอดจาก Sale
+        class Beverage extends Sale {
+            constructor(name, amount, price, discount) {
+                super(name);
+                this.amount = amount;
+                this.price = price;
+                this.discount = discount;
+            }
+
+            calcTotalPrice() {
+                const priceAfterDiscount = super.calcPrice(this.price, this.discount); // เรียกใช้ method calcPrice() จาก Sale
+                const totalPrice = priceAfterDiscount * this.amount; // คำนวณราคาสุทธิทั้งหมด
+                return totalPrice.toFixed(2); // แสดงผลรวมให้มีทศนิยมไม่เกิน 2 ตำแหน่ง
+            }
+        }
+
+        // เมื่อโหลดหน้าให้ทำการสร้าง instance ของ Beverage
+        window.onload = function () {
+            let beverage = new Beverage("Pepsi", 3, 19, 0.1); // สร้าง object beverage
+            let totalPrice = beverage.calcTotalPrice(); // คำนวณราคาสุทธิ
+            console.log(`Total Price for ${beverage.name}: ฿${totalPrice}`); // แสดงผล
+            alert(`Total Price for ${beverage.name}: ฿${totalPrice}`); // แสดงผลใน alert
+        };
+    </script>
+</body>
+
+</html>
