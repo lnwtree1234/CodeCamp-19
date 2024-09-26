@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js90</title>
+</head>
+
+<body>
+    <script>
+        function getNumbersAndCalculateSum() {
+            const numbers = []; // สร้างอาเรย์เพื่อเก็บตัวเลข
+            let input;
+
+            // ใช้ลูปเพื่อรับค่าจากผู้ใช้
+            while (true) {
+                input = prompt("กรุณากรอกตัวเลข (กด Cancel หรือพิมพ์ข้อความเพื่อหยุด):");
+
+                // ตรวจสอบว่าเป็น null (กด Cancel) 
+                if (input === null) {
+                    break; // หยุดลูป
+                }
+
+                // ตรวจสอบว่าเป็นตัวเลขหรือไม่
+                if (isNaN(input)) {
+                    alert("กรุณากรอกตัวเลขเท่านั้น!"); // แจ้งเตือนผู้ใช้
+                    continue; // กลับไปที่ลูปเพื่อขอค่าตัวเลขใหม่
+                }
+
+                // แปลงค่าที่รับมาเป็นตัวเลขและเก็บไว้ในอาเรย์
+                numbers.push(Number(input));
+            }
+
+            // คำนวณผลรวมของตัวเลขในอาเรย์
+            const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+
+            // แสดงผลรวม
+            console.log("ผลรวมของตัวเลขที่กรอกคือ:", sum);
+        }
+
+        // เรียกใช้ฟังก์ชัน
+        getNumbersAndCalculateSum();
+    </script>
+</body>
+
+</html>
