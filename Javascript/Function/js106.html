@@ -1,0 +1,34 @@
+<!-- Thodsawas Ubol CodeCamp#19 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js106 Lab20 Function</title>
+</head>
+
+<body>
+    <script>
+        function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+        }
+
+        // ฟังก์ชันที่ใช้สำหรับพารามิเตอร์ yes
+        function agree() {
+            alert("I’m agree with you ?");
+        }
+
+        // ฟังก์ชันที่ใช้สำหรับพารามิเตอร์ no
+        function disagree() {
+            alert("whyyyyyyy !");
+        }
+
+        // เรียกใช้ฟังก์ชัน ask
+        ask('Do you agree?', agree, disagree);
+
+    </script>
+</body>
+
+</html>
